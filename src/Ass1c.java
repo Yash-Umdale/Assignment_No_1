@@ -8,6 +8,7 @@ public class Ass1c {
         System.out.println("Enter the Number: ");
         n=sc.nextInt();
         System.out.println();
+        System.out.println("For Loop");
         System.out.println("Multiplication Table:");
         for(i=1;i<=10;i++){
             int mul=i*n;
@@ -25,7 +26,6 @@ public class Ass1c {
         }
 
         System.out.println("Armstrong number:");
-        //int arm = input.nextInt();
         int temp =n, sum = 0;
         int digits = String.valueOf(n).length();
 
