@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Ass1c {
     public static void main(String[] args) {
-        int n,a,b,i;
+        int n,a,b,i,c,d,sum=0;
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the Number: ");
         n=sc.nextInt();
@@ -15,29 +15,35 @@ public class Ass1c {
             System.out.println(n+"*"+i+"="+mul);
         }
 
-        System.out.println("Fibonacci series:");
+        //While Loop
+        System.out.println("While Loop");
+        System.out.print("Fibonacci Serise: ");
         a=0;
         b=1;
-        for(i=1;i<=n;i++){
-            System.out.print(a+" ");
-            int c=a+b;
+        i=1;
+        while(i<=n){
+            System.out.format("%d ",a);
+            c=a+b;
             a=b;
             b=c;
+            i++;
         }
+        System.out.println();
 
-        System.out.println("Armstrong number:");
-        int temp =n, sum = 0;
-        int digits = String.valueOf(n).length();
-
-        for (; temp != 0; temp /= 10) {
-            int d = temp % 10;
-            sum += Math.pow(d, digits);
+        //do-while Loop
+        System.out.println("do-while Loop");
+        int temp=n;
+        int digit=String.valueOf(n).length();
+        do {
+            d=temp%10;
+            sum+=Math.pow(d,digit);
+            temp/=10;
+        }while(temp!=0);
+        if(sum==n){
+            System.out.println("Armsttrong Number");
         }
-
-        if (sum==n) {
-            System.out.println("Armstrong number.");
-        } else {
-            System.out.println("Not Armstrong number.");
+        else{
+            System.out.println("Not Armstrong Number");
         }
 
     }
